@@ -1,3 +1,21 @@
+.dot {
+	height: 250px;
+	width: 250px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+#imagem {
+	position: absolute;
+	top: 5px;
+	left: 35px;
+	
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
 header {
 	background:  #BBBBBB;
 	padding: 20px 0;
@@ -95,13 +113,10 @@ footer {
 	margin-top: 20px;
 }
 
-main {
-	width: 940px;
-	margin: 0 auto;
-}
-
 form {
+	text-align: center;
 	margin: 40px 0;
+	padding: auto;
 }
 
 form label, form legend {
@@ -111,7 +126,7 @@ form label, form legend {
 }
 
 .input-padrao {
-	display: block;
+	display: inline;
 	margin: 0 0 20px;
 	padding: 10px 25px;
 	width: 50%;
@@ -140,7 +155,11 @@ form label, form legend {
 }
 
 table {
-	margin: 20px 0 40px;
+	text-align: center;
+	display: inline;
+	width: auto;
+	margin: auto;
+	padding: auto;
 }
 
 thead {
@@ -156,7 +175,11 @@ td, th {
 
 /* CSS da pagina inicial */
 .banner {
-	width: 100%;
+	width: 50%;
+	height: 50%;
+	padding: auto;
+	margin: auto;
+	display: block;
 }
 
 .titulo-principal {
@@ -164,6 +187,13 @@ td, th {
 	font-size: 2em;
 	margin: 0 0 1em;
 	clear: left;
+}
+
+.principal {
+	padding: 3em 0;
+	background: #FEFEFE;
+	width: 940px;
+	margin: 0 auto;
 }
 
 .principal p {
@@ -182,9 +212,129 @@ td, th {
 	width: 120px;
 	float: left;
 	margin: 0 20px 20px 0;
+	border-radius: 50%;
+}
+.conteudo-beneficios {
+	width: 640px;
+	margin: 2em auto;
 }
 
-.imagembeneficios {
+.mapa {
+	padding: 3em 0;
+	background: linear-gradient(#FEFEFE,#888888);
+}
+
+.mapa p {
+	margin: 0 0 2em;
+	text-align: center;
+}
+
+.mapa-conteudo {
+	width: 940px;
+	margin: 0 auto;
+}
+
+.beneficios {
+	padding: 3em 0;
+	background: #888888;
+}
+
+.lista-beneficios {
+	width: 40%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.itens {
+	line-height: 1.5em;
+}
+
+.itens:first-child {
+	font-weight: bold;
+}
+
+.itens:before {
+	content: "★";
+}
+
+.imagem-beneficios {
 	width: 60%;
+	opacity: 1;
+	transition: 250ms;
+	box-shadow: 10px 10px 10px #000000
 }
 
+.imagem-beneficios:hover {
+	width: 60%;
+	opacity: 0.3;
+}
+
+.video {
+	width: 560px;
+	margin: 2em auto;
+}
+
+@media screen and (max-width:  480px) {
+	.caixa, .principal, .conteudo-beneficios, .mapa-conteudo, .video, .navegacao {
+		width: auto;
+	}
+
+	h1 {
+		text-align: center;
+		width: auto;
+
+	}
+
+	nav {
+		position: static;
+	}
+
+	.lista-beneficios, .imagem.beneficios {
+		width: 100%;
+	}
+
+	.formulario {
+		text-align: center;
+		margin: 0 auto;
+		padding: 2em 0;
+		display: inline-block;
+	}
+
+	.tabela {
+		width: auto;
+		text-align: center;
+		margin: auto;
+		padding: 2em 0;
+		display: inline-block;
+	}
+
+	.input-padrao {
+		display: inline;
+	}
+
+	footer {
+		margin: 2em 0;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	.produtos {
+		text-align: center;
+		width: auto;
+		padding: auto;
+	}
+
+	.produtos li {
+	display: inline-block;
+	text-align: center;
+	width: 95%;
+	vertical-align: top;
+	margin: 1em auto;
+	padding: 2em 0;
+	box-sizing: border-box;
+	border: 1px solid #000000;
+	border-radius: 10px;
+	}
+}
